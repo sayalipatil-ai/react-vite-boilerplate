@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMsal } from '@azure/msal-react';
-import './login.css';
+import { styles } from './styles';
 
 const Login: React.FC = () => {
   const { instance } = useMsal();
@@ -8,7 +8,7 @@ const Login: React.FC = () => {
   const handleLogin = () => {
     instance
       .loginPopup({
-        scopes: ['user.read'], 
+        scopes: ['user.read'],
       })
       .then((response) => {
         console.log('Login successful:', response);
@@ -19,10 +19,19 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
-      <div className="card p-4 shadow login-card">
-        <h1 className="text-center mb-4">Login with Microsoft</h1>
-        <button onClick={handleLogin} className="btn btn-primary w-100">
+    <div style={styles.container}>
+      <div style={styles.card}>
+        <h1 style={styles.title}>Login with Microsoft</h1>
+        <button
+          style={styles.button}
+          onClick={handleLogin}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = styles.buttonHover.backgroundColor || '';
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = styles.button.backgroundColor || '';
+          }}
+        >
           Sign in with Microsoft
         </button>
       </div>
