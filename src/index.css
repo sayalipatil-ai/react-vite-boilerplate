@@ -11,28 +11,3 @@ body {
   background-color: #f0f2f5; 
   position: relative; 
 }
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('./assets/doctor-bg.jpg');
-  background-size: cover; 
-  background-position: center; 
-  opacity: 0.5; 
-  z-index: -1; 
-}
-
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(128, 128, 128, 0.5); 
-  z-index: 0;
-}
