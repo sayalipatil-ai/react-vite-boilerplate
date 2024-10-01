@@ -1,7 +1,8 @@
-import './App.css';
-import LoginView from './views/LoginView';
+import React from 'react';
+import AppRouter from './views/AppRouter';
 
-function App() {
-  return <LoginView />;
-}
+const App: React.FC = () => {
+  return <AppRouter/>;
+};
+
 export default App;

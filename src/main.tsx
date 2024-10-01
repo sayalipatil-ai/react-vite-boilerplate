@@ -6,8 +6,8 @@ import './index.css';
 import { MsalProvider } from '@azure/msal-react';
 import { PublicClientApplication } from '@azure/msal-browser';
 import { msalConfig } from './utils/msalConfig';
-import { ThemeProvider } from '@mui/material/styles'; // Import ThemeProvider
-import theme from './utils/theme'; // Import custom theme
+import { ThemeProvider } from '@mui/material/styles'; 
+import theme from './utils/theme';
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
