@@ -1,12 +1,20 @@
-import React from 'react';
-import { useMsal } from '@azure/msal-react';
+
+import React, { useEffect } from 'react';
+import { useMsal, useIsAuthenticated } from '@azure/msal-react';
 import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { styles } from './styles';
 
 const Login: React.FC = () => {
   const { instance } = useMsal();
+  const isAuthenticated = useIsAuthenticated();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/dashboard');
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleLogin = () => {
     instance
@@ -15,7 +23,7 @@ const Login: React.FC = () => {
       })
       .then((response) => {
         console.log('Login successful:', response);
-          navigate('/dashboard');
+        navigate('/dashboard'); 
       })
       .catch((error) => {
         console.error('Login failed:', error);
@@ -46,5 +54,3 @@ const Login: React.FC = () => {
 };
 
 export default Login;
-
-

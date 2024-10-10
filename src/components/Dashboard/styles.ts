@@ -17,6 +17,16 @@ export const styles : { [key: string]: CSSProperties } = {
       marginTop: '20px',
       textDecoration: 'none',
       color: '#0d47a1',
+      marginBottom:'15px'
+    },
+    button: {
+      backgroundColor: '#0d47a1',
+      color: 'white',
+      width: '8%',
+      padding: '10px',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
     },
   };
   
