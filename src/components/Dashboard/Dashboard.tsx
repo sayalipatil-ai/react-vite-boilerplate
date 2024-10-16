@@ -11,7 +11,7 @@ const Dashboard: React.FC = () => {
   const handleLogout = () => {
     instance.logoutPopup().then(() => {
       console.log('Logged out successfully');
-      navigate('/login'); 
+      navigate('/'); 
     }).catch((error) => {
       console.error('Logout failed:', error);
     });
@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Welcome to the Dashboard!</h1>
-      <Link to="/login" style={styles.link}>
+      <Link to="/dashboard" style={styles.link}>
         Back to Login
       </Link>
       <Button
