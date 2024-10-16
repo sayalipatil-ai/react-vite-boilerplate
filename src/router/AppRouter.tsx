@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRoutes, Navigate  } from 'react-router-dom';
-import { LoginRoute } from '../components/Login';
-import { DashboardRoute } from '../components/Dashboard/index';
+import { LoginRoute } from '../views/Login';
+import { DashboardRoute } from '../views/Dashboard/index';
 
 
 const routes = [

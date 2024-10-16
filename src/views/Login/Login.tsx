@@ -2,7 +2,8 @@
 import React, { useEffect } from 'react';
 import { useMsal, useIsAuthenticated } from '@azure/msal-react';
 import { useNavigate } from 'react-router-dom';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import CustomButton from '../../components/Button/Button';
 import { styles } from './styles';
 
 const Login: React.FC = () => {
@@ -34,7 +35,7 @@ const Login: React.FC = () => {
     <div style={styles.container}>
       <div style={styles.card}>
         <h1 style={styles.title}>Login with Microsoft</h1>
-        <Button
+        <CustomButton
           variant="contained"
           color="primary"
           style={styles.button}
@@ -47,7 +48,7 @@ const Login: React.FC = () => {
           }}
         >
           Sign in with Microsoft
-        </Button>
+        </CustomButton>
       </div>
     </div>
   );
