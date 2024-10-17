@@ -4,7 +4,7 @@ import { useMsal, useIsAuthenticated } from '@azure/msal-react';
 import { useNavigate } from 'react-router-dom';
 // import Button from '@mui/material/Button';
 // import CustomButton from '../../components/Button/Button';
-import { CustomButton } from '../../components/Button';
+import { CustomButton } from '../../components';
 import { styles } from './styles';
 
 const Login: React.FC = () => {
