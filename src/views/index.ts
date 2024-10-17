@@ -1,2 +1,2 @@
-export * from './Login';
-export * from './Dashboard';
+export * from './login';
+export * from './dashboard';

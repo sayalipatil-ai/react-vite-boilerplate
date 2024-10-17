@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'; 
-import { styles } from '../Dashboard/styles';
+import { styles } from './styles';
 import { useMsal } from '@azure/msal-react';
 import Button from '@mui/material/Button';
 
