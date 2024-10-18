@@ -22,7 +22,7 @@ export const styles : { [key: string]: CSSProperties } = {
     button: {
       backgroundColor: '#0d47a1',
       color: 'white',
-      width: '8%',
+      width: '10%',
       padding: '10px',
       border: 'none',
       borderRadius: '5px',

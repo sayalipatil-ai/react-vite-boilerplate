@@ -1,25 +1,23 @@
-import React from 'react';
-import { useRoutes, Navigate  } from 'react-router-dom';
-// import { LoginRoute } from '../views/Login';
-// import { DashboardRoute } from '../views/Dashboard/index';
-import { LoginRoute, DashboardRoute } from '../views';
+  import React from 'react';
+  import { useRoutes, Navigate  } from 'react-router-dom';
+  import { LoginRoute, DashboardRoute, CardRoute} from '../views';
 
+  const routes = [
+    LoginRoute,
+    DashboardRoute,
+    CardRoute,
+    {
+      path: '*', 
+      element: <Navigate to="/dashboard" replace />, 
+    },
+  ];
 
-const routes = [
-  LoginRoute,
-  DashboardRoute,
-  {
-    path: '*', 
-    element: <Navigate to="/dashboard" replace />, 
-  },
-];
+  const AppRouter: React.FC = () => {
+    const element = useRoutes(routes);
+    return <>{element}</>;
+  };
 
-const AppRouter: React.FC = () => {
-  const element = useRoutes(routes);
-  return <>{element}</>;
-};
-
-export default AppRouter;
+  export default AppRouter;
 
 
 

@@ -1,0 +1,53 @@
+/* layout.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    flex: none;
+    padding: 10px 20px 1px 20px;
+    width: 100vw;
+    background: white;
+  }
+  
+  .main {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .content {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0; /* Remove any margins */
+  padding: 0;
+  }
+  
+  .sidebar {
+    flex: none;
+    position: relative;
+  }
+  
+  .childrenContainer {
+    flex: 1;
+    padding: 1rem; 
+    background-color: #f7fafc; 
+  }
+  
+
